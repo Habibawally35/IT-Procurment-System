@@ -63,7 +63,7 @@ it_procurement/
 │       ├── components/   Layout, badges, modal, etc.
 │       ├── pages/        Login, Dashboard, Requests, CreateRequest, RequestDetail, Approvals
 │       └── i18n.js       Arabic UI text
-└── ai_service/           Placeholder (not implemented)
+
 ```
 
 ## Getting started
@@ -154,14 +154,4 @@ All endpoints except login and health require `Authorization: Bearer <token>`.
 virtual environments and build output are excluded by `.gitignore`. A new checkout
 starts with an empty database — run `npm run seed`.
 
-## Known limitations
 
-- Single-process SQLite kept in memory (sql.js); suitable for a demo or small team,
-  not for multiple server instances.
-- Managers can review every employee's request; there is no team/department model.
-- Users can only be created by the seed script (no user management screens).
-- Requests cannot be edited or cancelled after submission; procurement cannot reject.
-- No notifications (email or in-app).
-- `ai_service/` is an empty placeholder.
-- Frontend tooling (Create React App) reports `npm audit` warnings in its build and
-  dev-server dependencies; these do not ship to the browser.
